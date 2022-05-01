@@ -26,12 +26,7 @@ namespace OnlineShoeWebsite.Payout
 
                     Response.Redirect("../Accounts/Login.aspx");
                 }
-                else if (Session["UserNameU"] != null && Request.QueryString["PId"] == null)
-                {
-
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Cart is Empty')", true);
-                    Response.Redirect("../Default.aspx");
-                }
+                
                 else
                 {
                     BindCart();
@@ -66,6 +61,7 @@ namespace OnlineShoeWebsite.Payout
                 else
                 {
                     gvCart.Visible = false;
+                    linkChk.Visible = false;
                 }
             }
         }
