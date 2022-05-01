@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Shoe.master.cs" Inherits="OnlineShoeWebsite.Shoe" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+    <%--<link href="Content/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />--%>
+    <%-- <link href="AdminCss/bootstrap.min.css" rel="stylesheet" />--%>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+    <%--<link href="Content/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />--%>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <%--<link href="AdminCss/all.min.css" rel="stylesheet" />--%>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <%-- <script src="Content/jquery-3.6.0.min.js"></script>--%>
+
+    <style>
+
+        *{
+            padding:0;
+            margin:0;
+        }
+
+        body{
+            background-color:#F5F5F5;
+            overflow-x:hidden;
+        }
+
+
+        .navbar-brand {
+            padding: 0px;
+        }
+
+        .bg-dark {
+            background-color: #454444 !important;
+        }
+
+        .navi{
+            margin-top:20px;
+        }
+
+        #HpUser {
+            text-decoration: none;
+            color: white;
+            padding:8px;
+        }
+
+        #btnLogout {
+            background: none;
+            border: none;
+            color: white;
+            border-radius:10px;
+            padding:6px 12px;
+            cursor:pointer;
+        }
+
+
+        #btnLogout:hover{
+            background-color:#5ac1d8;
+        }
+
+
+        .cartlink{
+            background:none;
+            border:none;
+            margin-top:-5px;
+            padding:6px 12px;
+            border-radius:10px;
+            color:#fff!important;
+            margin-right:10px;
+        }
+
+        .cartlink:hover{
+            background-color:#5ac1d8;
+        }
+
+
+         ul li a {
+                   border-radius:5px;
+                }
+
+            ul li a:hover {
+                background-color: #5ac1d8;
+            }
+
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form id="form1" runat="server">
+        <div>           
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:60px;">
+                <a class="navbar-brand" style="font-family: 'Lato', sans-serif; font-size: 30px; font-weight: bold;" href="../Default.aspx">ShoeFactory</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mr-4">
+                            <asp:HyperLink ID="HpRegis" runat="server" class="nav-link" Style="font-family: 'Lato', sans-serif;" NavigateUrl="~/Accounts/Registration.aspx">Register</asp:HyperLink>
+
+                        </li>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="HpLog" runat="server" class="nav-link" Style="font-family: 'Lato', sans-serif;" NavigateUrl="~/Accounts/Login.aspx">Login</asp:HyperLink>
+                        </li>
+
+                         <li class="nav-item navi">
+                             <asp:Button ID="HpCart" runat="server" Text="Cart" CssClass="nav-link cartlink" Width="60px" OnClick="HpCart_Click"/>
+                        </li>
+
+                        <li class="nav-item navi">
+                            <asp:HyperLink ID="HpUser" runat="server" class="nav-link" Style="font-family: 'Lato', sans-serif;" Enabled="false"></asp:HyperLink>
+                        </li>
+
+                        <li class="nav-item">
+                            <asp:Button ID="btnLogout" runat="server" CssClass="nav-link logoutlink" Text="Logout" OnClick="btnLogout_Click"/>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+
+          
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+            </asp:ContentPlaceHolder>
+               
+        </div>
+    </form>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Popper.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+</body>
+</html>

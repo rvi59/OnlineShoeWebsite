@@ -1,0 +1,213 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="OnlineShoeWebsite.AdminDashBoard.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="Content/Adminstyles/Adminstyle.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+
+      <style>
+        
+#btnLogout {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+
+    #btnLogout:hover {
+        background: transparent;
+        border: none;
+        color: #fc8300;
+    }
+
+
+    #btnLogout1 {
+    background: transparent;
+    border: none;
+   
+}
+
+
+    #btnLogout1:hover {
+        background: transparent;
+        border: none;
+        color: #fc8300!important;
+    }
+
+
+
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form id="form1" runat="server">
+        <div>
+            <div>
+                <div class="wrapper">
+                    <!-- Sidebar  -->
+
+
+                    <nav id="sidebar">
+                        <div class="sidebar-header">
+                            <h3>Shoe Factory</h3>
+                           <button type="button" id="sidebarCollapse1" class="btn text-sidebar bg-turbo-yellow">
+                                    <i class="fas fa-align-left"></i>
+                                    <span></span>
+                                </button>
+                        </div>
+                        <ul class="list-unstyled components">
+                            <p>Welcome <asp:Label ID="lbluser" runat="server" Text="" Font-Bold="true"></asp:Label></p>
+                            <li>
+                                <a href="Dashboard.aspx"><i class="fas fa-tachometer-alt"></i><span>&nbsp;&nbsp;&nbsp;Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="#brandSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-bandcamp"></i><span>&nbsp;&nbsp;&nbsp;Brand</span></a>
+                                <ul class="collapse list-unstyled" id="brandSubmenu">
+
+                                    <li>
+                                        <a href="AddBrand.aspx">Add New Brand</a>
+                                    </li>
+                                    <li>
+                                        <a href="BrandList.aspx">Brand List</a>
+                                    </li>
+                                    <li>
+                                        <a href="DeleteBrand.aspx">Delete Brand</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-sitemap"></i><span>&nbsp;&nbsp;&nbsp;Category</span></a>
+                                <ul class="collapse list-unstyled" id="categorySubmenu">
+
+                                    <li>
+                                        <a href="AddCategory.aspx">Add New Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="CategoryList.aspx">Category List</a>
+                                    </li>
+                                    <li>
+                                        <a href="DeleteCategory.aspx">Delete Category</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#sizeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-weight"></i><span>&nbsp;&nbsp;&nbsp;Size</span></a>
+                                <ul class="collapse list-unstyled" id="sizeSubmenu">
+
+                                    <li>
+                                        <a href="AddSize.aspx">Add New Size</a>
+                                    </li>
+                                    <li>
+                                        <a href="SizeList.aspx">Size List</a>
+                                    </li>
+                                    <li>
+                                        <a href="DeleteSize.aspx">Delete Size</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-cart-arrow-down"></i><span>&nbsp;&nbsp;&nbsp;Product</span></a>
+                                <ul class="collapse list-unstyled" id="productSubmenu">
+
+                                    <li>
+                                        <a href="AddProduct.aspx">Add New Product</a>
+                                    </li>
+                                    <li>
+                                        <a href="ProductList.aspx">Product List</a>
+                                    </li>
+                                    <li>
+                                        <a href="DeleteProduct.aspx">Delete Product</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fas fa-cog"></i><span>&nbsp;&nbsp;&nbsp;Setting</span></a>
+                            </li>
+                        </ul>
+
+                        <ul class="list-unstyled CTAs">
+                            <li>
+                                <a class="download"><i class="fas fa-sign-out-alt"></i><span>
+                                    <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" /></span></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Page Content  -->
+                   
+                    <div id="content">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <button type="button" id="sidebarCollapse" class="btn text-sidebar bg-turbo-yellow">
+                                    <i class="fas fa-align-left"></i>
+                                    <span></span>
+                                </button>
+                                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="fas fa-align-justify"></i>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="nav navbar-nav ml-auto">
+                                        <li class="nav-item active">
+                                            <img src="Content/Images/profile.png" height="25" width="25" alt="Alternate Text" />
+                                        </li>
+                                        <li class="nav-item">
+                                            <asp:Button ID="btnLogout1" runat="server" CssClass="nav-link" Text="Logout" OnClick="btnLogout1_Click" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <br />
+
+
+
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>       
+        </div>
+     
+    </form>
+
+
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+      <script type="text/javascript">
+          $(document).ready(function () {
+              $('#sidebarCollapse').on('click', function () {
+                  $('#sidebar').toggleClass('active');
+              });
+
+
+              $('#sidebarCollapse1').on('click', function () {
+                  $('#sidebar').toggleClass('active');
+              });
+
+          });
+
+
+        
+
+      </script>
+</body>
+</html>
