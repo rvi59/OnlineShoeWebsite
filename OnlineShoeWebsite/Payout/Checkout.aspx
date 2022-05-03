@@ -28,10 +28,16 @@
         <div class="form-group">
             <label>Address</label>
             <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Address Cannot be Empty" ForeColor="Red" ControlToValidate="txtAddress" Display="Dynamic"></asp:RequiredFieldValidator>
+            
+
         </div>
         <div class="form-group">
             <label>Mobile Number</label>
             <asp:TextBox ID="txtNumber" TextMode="Number" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Mobile Number Cannot be Empty" ForeColor="Red" ControlToValidate="txtNumber" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Please Enter Valid Number" ForeColor="Red" ControlToValidate="txtNumber" Display="Dynamic" ValidationExpression="(0|91)?[7-9][0-9]{9}"></asp:RegularExpressionValidator>
+            
 
         </div>
         <br />
@@ -47,7 +53,8 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
     <script>
-
+       
+      
 
         function OpenPaymentWindow(key, amountInSubmits, currency, name, description, imageLogo, orderId, profileName, profileEmail, profileMobile, notes) {
 

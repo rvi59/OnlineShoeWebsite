@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminDashBoard/Admin.Master" AutoEventWireup="true" CodeBehind="AddProduct.aspx.cs" Inherits="OnlineShoeWebsite.AdminDashBoard.AddProduct" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminDashBoard/Admin.Master" AutoEventWireup="true" CodeBehind="AddProduct.aspx.cs" Inherits="OnlineShoeWebsite.AdminDashBoard.AddProduct"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
     <style>
@@ -61,7 +61,7 @@
          <div class="form-group row">
             <label class="col-sm-2 col-form-label">Quantity</label>
             <div class="col-sm-8">
-                <asp:TextBox ID="txtQty" runat="server" class="form-control" TextMode="Number"></asp:TextBox>
+                <asp:TextBox ID="txtQty" runat="server" class="form-control" TextMode="Number" step="1" min="1"  max="10" Text="1"></asp:TextBox>
 
             </div>
         </div>

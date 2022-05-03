@@ -167,7 +167,7 @@ namespace OnlineShoeWebsite.AdminDashBoard
                             cmd.Parameters.AddWithValue("@PShortName", txtPShortName.Text);
                             cmd.Parameters.AddWithValue("@PPrice", txtPPrice.Text);
                             cmd.Parameters.AddWithValue("@PSelling_Price", txtPSPrice.Text);
-                            cmd.Parameters.AddWithValue("@PQuanity", txtQty.Text);
+                            cmd.Parameters.AddWithValue("@PQuantity", txtQty.Text);
                             cmd.Parameters.AddWithValue("@BrandId", ddlBrand.SelectedItem.Value);
                             cmd.Parameters.AddWithValue("@CatId", ddlCategory.SelectedItem.Value);
                             cmd.Parameters.AddWithValue("@SizeId", ddlSize.SelectedItem.Value);

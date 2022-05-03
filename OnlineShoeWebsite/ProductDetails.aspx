@@ -91,8 +91,8 @@
                 <label class="font-weight-bold">Quantity&nbsp;&nbsp;</label>
                     </td>
                     <td>
-                 <asp:TextBox ID="txtQty" runat="server" Text="1" TextMode="Number" Width="150px" CssClass="form-control"></asp:TextBox>
-                    </td>
+                 <asp:TextBox ID="txtQty" runat="server" Text="1" Width="150px" CssClass="form-control" TextMode="Number" step="1" min="1"  max="10"></asp:TextBox>
+                        </td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
                       <td>
              <asp:LinkButton ID="lbCart" runat="server" OnClick="lbCart_Click" CssClass="btn btn-success">Add To Cart</asp:LinkButton>
@@ -106,5 +106,12 @@
         </div>
        
     </div>
+
+    <script>
+
+       
+
+    </script>
+
 
 </asp:Content>
