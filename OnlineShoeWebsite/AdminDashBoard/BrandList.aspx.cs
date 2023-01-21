@@ -47,16 +47,16 @@ namespace OnlineShoeWebsite.AdminDashBoard
         }
 
 
-        protected void gvBrand_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.Header)
-            {
-                e.Row.Cells[0].Text = "Brand ID";
-                e.Row.Cells[1].Text = "Brand Name";
+        //protected void gvBrand_RowDataBound(object sender, GridViewRowEventArgs e)
+        //{
+        //    if (e.Row.RowType == DataControlRowType.Header)
+        //    {
+        //        e.Row.Cells[0].Text = "Brand ID";
+        //        e.Row.Cells[1].Text = "Brand Name";
 
 
-            }
-        }
+        //    }
+        //}
 
     }
 }

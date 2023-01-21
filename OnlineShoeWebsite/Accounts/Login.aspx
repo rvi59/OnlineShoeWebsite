@@ -6,6 +6,10 @@
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 10px;
         }
 
+        body{
+            overflow-y:hidden;
+        }
+
         .lbl {
             font-weight: bold;
             color: #2D2D2D;
@@ -302,7 +306,7 @@
 
                     <div class="form-group">
                         <label class="lbl">Enter New Password</label>
-                        <asp:TextBox ID="txtPass" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtPass" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                     </div>
 
                     <div class="form-group">

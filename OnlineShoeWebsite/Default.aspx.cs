@@ -29,13 +29,13 @@ namespace OnlineShoeWebsite
             }
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
+        //protected void btnSearch_Click(object sender, EventArgs e)
+        //{
 
-            Session["Searchtxt"] = txtSearch.Text;
-            Response.Redirect("SearchResult.aspx");
+        //    Session["Searchtxt"] = txtSearch.Text;
+        //    Response.Redirect("SearchResult.aspx");
 
-        }
+        //}
 
 
         private void BindCasual()

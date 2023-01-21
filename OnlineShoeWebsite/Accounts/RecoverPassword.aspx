@@ -11,8 +11,8 @@
         <br />
         <div class="form-group">
             <label style="font-weight: bold; color: #2D2D2D;">Enter New Password</label>
-            <asp:TextBox ID="txtnpass" runat="server" placeholder="Enter New Password" class="form-control"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter New Password" ControlToValidate="txtnpass" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtnpass" runat="server" placeholder="Enter New Password" TextMode="Password" class="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" TextMode="Password" ErrorMessage="Please Enter New Password" ControlToValidate="txtnpass" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
 
         <div class="form-group">

@@ -59,10 +59,10 @@ namespace OnlineShoeWebsite.Accounts
                         string ToEmailAddress = dt.Rows[0][3].ToString();
                         string Username = dt.Rows[0][1].ToString();
 
-                        string EmailBody = "Hi , " + Username + ",<br/><br/> Click the link below to reset your Password <br/> <br/> http://localhost:65401/Accounts/RecoverPassword.aspx?id=" + myGuid;
+                        string EmailBody = "Hi , " + Username + ",<br/><br/> Copy the link below to reset your Password <br/> <br/> http://localhost:62408/Accounts/RecoverPassword.aspx?id=" + myGuid;
 
 
-                        MailMessage PasRecMail = new MailMessage("ravikumar.yadav1000@gmail.com", ToEmailAddress);
+                        MailMessage PasRecMail = new MailMessage("raviyadav22497@gmail.com", ToEmailAddress);
                         PasRecMail.Body = EmailBody;
                         PasRecMail.IsBodyHtml = true;
                         PasRecMail.Subject = "Reset Password";
@@ -73,7 +73,7 @@ namespace OnlineShoeWebsite.Accounts
                         {
 
                             smtp.UseDefaultCredentials = false;
-                            smtp.Credentials = new NetworkCredential("ravikumar.yadav1000@gmail.com", "rvind5599");
+                            smtp.Credentials = new NetworkCredential("raviyadav22497@gmail.com", "emxisndsqcpfldpg");
                             smtp.EnableSsl = true;
 
                             smtp.Host = "smtp.gmail.com";
@@ -92,7 +92,7 @@ namespace OnlineShoeWebsite.Accounts
                             });";
 
                         ScriptManager.RegisterStartupScript(this, GetType(), "Success", str_alert_Msg, true);
-
+                       1
                         txtmail.Text = "";
                     }
                     else

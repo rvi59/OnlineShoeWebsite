@@ -195,11 +195,11 @@
 
                     <div class="form-group">
                         <label class="lbl">Enter New Password</label>
-                        <input type="text" id="txtPass" class="form-control">
+                        <input type="password" id="txtPass"   class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="lbl">Confirm New Password</label>
-                        <input type="text" id="txtCPass" class="form-control">
+                        <input type="password" id="txtCPass" class="form-control">
                     </div>
 
                     <div class="form-group">
@@ -307,13 +307,14 @@
                         if (response.d == true) {
 
                             alert("data inserted successfully");
+                            window.location = "Login.aspx";
                         }
                         else {
-                            alert("data insertion failed");
+                            //alert("data insertion failed");
                         }
                     },
                     error: function (response) {
-                        alert('Error' + response);
+                        //alert('Error' + response);
                     }
                 });
             });

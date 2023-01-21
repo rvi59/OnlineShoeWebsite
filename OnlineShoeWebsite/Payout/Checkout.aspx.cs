@@ -22,8 +22,8 @@ namespace OnlineShoeWebsite.Payout
         string CS = ConfigurationManager.ConnectionStrings["MYCS"].ConnectionString;
 
 
-        public string _key = "";
-        public string _secret = "";
+        public string _key = "rzp_test_gidUjkAwomg2Mk";
+        public string _secret = "dRyuAbX1biSwyctbHszkFQVZ";
         public string orderId;
 
 

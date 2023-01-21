@@ -174,19 +174,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container-fluid">
-        <div class="container">
+      <%--  <div class="container">
             <center>
                 <div class="row my-4 mySeachgroup">
                     <div class="col-md-10">
                         <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"></asp:TextBox>
-                        <%-- <input type="text" placeholder="Search Product" class="form-control" />--%>
+                        <%-- <input type="text" placeholder="Search Product" class="form-control" />
                     </div>
                     <div class="col-md-2 mySearchbtn">
                         <asp:Button ID="btnSearch" runat="server" CssClass="btn btn-secondary" Text="Search" CausesValidation="false" OnClick="btnSearch_Click" />
                     </div>
                 </div>
             </center>
-        </div>
+        </div>--%>
 
         <div class="mycat">
             <div class="row">

@@ -97,7 +97,7 @@
                                         <a href="CategoryList.aspx">Category List</a>
                                     </li>
                                     <li>
-                                        <a href="DeleteCategory.aspx">Delete Category</a>
+                                        <a href="DeleteCategoryaspx.aspx">Delete Category</a>
                                     </li>
                                 </ul>
                             </li>
