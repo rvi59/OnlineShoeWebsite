@@ -62,7 +62,7 @@ namespace OnlineShoeWebsite.Accounts
                         string EmailBody = "Hi , " + Username + ",<br/><br/> Copy the link below to reset your Password <br/> <br/> http://localhost:62408/Accounts/RecoverPassword.aspx?id=" + myGuid;
 
 
-                        MailMessage PasRecMail = new MailMessage("raviyadav22497@gmail.com", ToEmailAddress);
+                        MailMessage PasRecMail = new MailMessage("@gmail.com", ToEmailAddress);
                         PasRecMail.Body = EmailBody;
                         PasRecMail.IsBodyHtml = true;
                         PasRecMail.Subject = "Reset Password";
@@ -73,7 +73,7 @@ namespace OnlineShoeWebsite.Accounts
                         {
 
                             smtp.UseDefaultCredentials = false;
-                            smtp.Credentials = new NetworkCredential("raviyadav22497@gmail.com", "emxisndsqcpfldpg");
+                            smtp.Credentials = new NetworkCredential("@gmail.com", "");
                             smtp.EnableSsl = true;
 
                             smtp.Host = "smtp.gmail.com";
@@ -198,7 +198,7 @@ namespace OnlineShoeWebsite.Accounts
         //                string EmailBody = "Hi , " + Username + ",<br/><br/> Click the link below to reset your Password <br/> <br/> http://localhost:57589/RecoverPassword.aspx?id=" + myGuid;
 
 
-        //                MailMessage PasRecMail = new MailMessage("Ravikumar.yadav1000@gmail.com", ToEmailAddress);
+        //                MailMessage PasRecMail = new MailMessage("@gmail.com", ToEmailAddress);
         //                PasRecMail.Body = EmailBody;
         //                PasRecMail.IsBodyHtml = true;
         //                PasRecMail.Subject = "Reset Password";
@@ -209,7 +209,7 @@ namespace OnlineShoeWebsite.Accounts
         //                {
 
         //                    smtp.UseDefaultCredentials = false;
-        //                    smtp.Credentials = new NetworkCredential("Ravikumar.yadav1000@gmail.com", "rvind5599");
+        //                    smtp.Credentials = new NetworkCredential("", "");
         //                    smtp.EnableSsl = true;
 
         //                    smtp.Host = "smtp.gmail.com";
